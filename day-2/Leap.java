@@ -1,22 +1,18 @@
 import java.util.Scanner;
-class Check
+class Leap
 {
 public static void main(String args[])
 {
 Scanner sc=new Scanner(System.in);
 System.out.println("Enter a number:");
 int a=sc.nextInt();
-if(a>0)
+if (a % 400 == 0 || (a % 4 == 0 && a % 100 != 0))
 {
-System.out.println(a+" is positive");
-}
-else if(a<0)
-{
-System.out.println(a+" is Negative");
+System.out.println(a + " is a Leap Year");
 }
 else
 {
-System.out.println("Zero");
+System.out.println(a+" is not Leap Year");
 }
 }
 }
